@@ -44,7 +44,7 @@ public class Main extends Plugin {
             String subReddit = message.body().substring(7).trim();
 
             if (!subRegex.matcher(subReddit).find()) {
-                return new Response(null, "Whoops! Invalid subreddit provided, make sure it's formatted -> r/YourSubReddit");
+                return new Response("Whoops! Invalid subreddit provided, make sure it's formatted -> r/YourSubReddit");
             }
 
             try {
@@ -53,19 +53,18 @@ public class Main extends Plugin {
 
                 if (first != null) {
                     if (first.getThumbnail() != null && !first.getThumbnail().isEmpty()) {
-
                         return new Response(new ImageCard(first.getEncodedThumbnail(), first.getThumbnail(), "Reddit"), first.getText());
-                    } else {
-                        return new Response(new UrlCard(first.getTitle(), "Click to view this reddit!", first.getUrl(), "Reddit"), null);
                     }
+
+                    return new Response(new UrlCard(first.getTitle(), "Click to view this reddit!", first.getUrl(), "Reddit"));
                 }
 
-                return new Response(null, "No supported content were found to send!");
+                return new Response("No supported content were found to send!");
 
             } catch (SubException e) {
-                return new Response(null, e.getMessage());
+                return new Response(e.getMessage());
             } catch (IOException e) {
-                return new Response(null, "There was an issue fetching the subreddit, please try again later!");
+                return new Response("There was an issue fetching the subreddit, please try again later!");
             }
         }
     }

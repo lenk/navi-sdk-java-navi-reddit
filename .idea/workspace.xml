@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbc29eeb-5300-4ca6-9996-f9ebda23d760" name="Changes" comment="ADD: SDK Update Support">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../navi-sdk-java-aelita-casino/navi-sdk-java-aelita-casino" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39310345" />
@@ -60,7 +60,7 @@
       <updated>1636515150382</updated>
       <workItem from="1636515151637" duration="1490000" />
       <workItem from="1636516659729" duration="8855000" />
-      <workItem from="1636583792733" duration="6010000" />
+      <workItem from="1636583792733" duration="6928000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE: Contact">
       <created>1636516915160</created>

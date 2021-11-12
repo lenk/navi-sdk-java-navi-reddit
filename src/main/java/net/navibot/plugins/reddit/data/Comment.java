@@ -61,6 +61,8 @@ public class Comment {
     public String getEncodedThumbnail() throws IOException {
 
         if (thumbnail != null && !thumbnail.isEmpty()) {
+            ImageIO.setUseCache(false);
+
             BufferedImage thumbnail = ImageIO.read(new URL(this.thumbnail));
 
             if (thumbnail != null) {

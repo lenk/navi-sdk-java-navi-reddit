@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dbc29eeb-5300-4ca6-9996-f9ebda23d760" name="Changes" comment="ADD: SDK Update Support">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/navibot/plugins/reddit/data/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/navibot/plugins/reddit/data/Comment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <workItem from="1636515151637" duration="1490000" />
       <workItem from="1636516659729" duration="8855000" />
       <workItem from="1636583792733" duration="6928000" />
-      <workItem from="1636597139499" duration="2725000" />
+      <workItem from="1636597139499" duration="4740000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE: Contact">
       <created>1636516915160</created>
@@ -91,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636597147297</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ADD: SDK Update Support">
+      <created>1636650902798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636650902798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

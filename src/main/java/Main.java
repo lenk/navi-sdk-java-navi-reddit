@@ -7,11 +7,21 @@ import net.navibot.sdk.data.ImageCard;
 import net.navibot.sdk.data.Message;
 import net.navibot.sdk.data.Response;
 import net.navibot.sdk.data.UrlCard;
+import org.apache.http.HttpHost;
+import org.apache.http.auth.AuthScope;
+import org.apache.http.auth.UsernamePasswordCredentials;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.BasicCredentialsProvider;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.DefaultProxyRoutePlanner;
 import org.pf4j.Extension;
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.regex.Pattern;
 
@@ -40,7 +50,7 @@ public class Main extends Plugin {
          * @param message incoming message
          * @return your response
          */
-        public Response onMessage(Message message, HashMap<String, String> storage) {
+        public Response onMessage(Message message, HttpClient client, HashMap<String, String> storage) {
             String subReddit = message.body().substring(7).trim();
 
             if (!subRegex.matcher(subReddit).find()) {
@@ -48,12 +58,12 @@ public class Main extends Plugin {
             }
 
             try {
-                SubReddit reddit = SubReddit.from(subReddit);
+                SubReddit reddit = SubReddit.from(subReddit, client);
                 Comment first = reddit.stream().filter( c -> !"hosted:video".equals(c.getType())).findFirst().orElse(null);
 
                 if (first != null) {
                     if (first.getThumbnail() != null && !first.getThumbnail().isEmpty()) {
-                        return new Response(new ImageCard(first.getEncodedThumbnail(), first.getThumbnail(), "Reddit"), first.getText());
+                        return new Response(new ImageCard(first.getEncodedThumbnail(client), first.getThumbnail(), "Reddit"), first.getText());
                     }
 
                     return new Response(new UrlCard(first.getTitle(), "Click to view this reddit!", first.getUrl(), "Reddit"));

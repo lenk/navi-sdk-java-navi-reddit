@@ -9,9 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbc29eeb-5300-4ca6-9996-f9ebda23d760" name="Changes" comment="ADD: SDK Update Support">
+    <list default="true" id="dbc29eeb-5300-4ca6-9996-f9ebda23d760" name="Changes" comment="ADD: Disabled Cache, File Storage not allowed for plugins">
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_lenk_navi_sdk_java_2_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_20030203_000550.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navi-sdk-java-navi-reddit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/navi-sdk-java-navi-reddit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/navibot/plugins/reddit/SubReddit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/navibot/plugins/reddit/SubReddit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/navibot/plugins/reddit/data/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/navibot/plugins/reddit/data/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +58,38 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../navi-sdk-java-aelita-casino/navi-sdk-java-aelita-casino" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39310345" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main$MyPlugin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main$MyPlugin" />
+      <module name="navi-sdk-java-navi-reddit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="navi-sdk-java-navi-reddit" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main$MyPlugin" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main$MyPlugin" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,7 +102,10 @@
       <workItem from="1636515151637" duration="1490000" />
       <workItem from="1636516659729" duration="8855000" />
       <workItem from="1636583792733" duration="6928000" />
-      <workItem from="1636597139499" duration="4740000" />
+      <workItem from="1636597139499" duration="7076000" />
+      <workItem from="1636773665477" duration="836000" />
+      <workItem from="1636871876422" duration="1202000" />
+      <workItem from="1636939600684" duration="10511000" />
     </task>
     <task id="LOCAL-00001" summary="UPDATE: Contact">
       <created>1636516915160</created>
@@ -99,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636650902798</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ADD: Disabled Cache, File Storage not allowed for plugins">
+      <created>1636675285316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636675285316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +170,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UPDATE: Contact" />
     <MESSAGE value="ADD: SDK Update Support" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: SDK Update Support" />
+    <MESSAGE value="ADD: Disabled Cache, File Storage not allowed for plugins" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: Disabled Cache, File Storage not allowed for plugins" />
   </component>
 </project>

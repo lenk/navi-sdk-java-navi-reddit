@@ -1,12 +1,23 @@
 package net.navibot.plugins.reddit.data;
 
+import net.navibot.sdk.data.Response;
+import net.navibot.sdk.utils.SimpleHttpUtils;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.json.JSONObject;
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.InetSocketAddress;
 import java.net.URL;
+import java.net.URLConnection;
 import java.util.Base64;
 
 public class Comment {
@@ -58,13 +69,12 @@ public class Comment {
         return "https://www.reddit.com/" + sub + "/comments/" + id;
     }
 
-    public String getEncodedThumbnail() throws IOException {
+    public String getEncodedThumbnail(HttpClient client) throws IOException {
 
         if (thumbnail != null && !thumbnail.isEmpty()) {
             ImageIO.setUseCache(false);
 
-            BufferedImage thumbnail = ImageIO.read(new URL(this.thumbnail));
-
+            BufferedImage thumbnail = ImageIO.read(new ByteArrayInputStream(SimpleHttpUtils.getBytes(client, new HttpGet(getThumbnail()))));
             if (thumbnail != null) {
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
                 ImageIO.write(thumbnail, "JPG", out);
